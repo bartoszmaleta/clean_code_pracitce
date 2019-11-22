@@ -3,24 +3,18 @@
 # --------------------------
 
 
-def geussing_number_from_list(list_with_random_numbers, range_of_game):
-    amount_of_numbers_in_a_list = 10
-    if range_of_game == 99:
-        int_range = 99
-    elif range_of_game == 49:
-        int_range = 49
+def geussing_number_from_list(list_with_random_numbers, high_range_of_game):
+    # amount_of_numbers_in_a_list = 10
+    int_range_low = 1
 
-    for i in range(amount_of_numbers_in_a_list):
-        ask_input = int(input(f"Enter an integer from 1 to {int_range}: "))
-        while list_with_random_numbers[i] != ask_input:
-            if ask_input < list_with_random_numbers[i]:
+    for number in list_with_random_numbers:
+        ask_input = 0
+        while number != ask_input:
+            ask_input = int(input(f"Enter an integer from {int_range_low} to {high_range_of_game}: "))
+            if ask_input < number:
                 print("guess is low")
-                ask_input = int(input("Enter an integer from 1 to {}: ".format(int_range)))
-            elif ask_input > list_with_random_numbers[i]:
+            elif ask_input > number:
                 print("guess is high")
-                ask_input = int(input("Enter an integer from 1 to {}: ".format(int_range)))
-            else:
-                break
         win_text = "you guessed it!"
         print(win_text)
 
