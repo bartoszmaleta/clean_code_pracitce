@@ -1,3 +1,5 @@
+ANSWER TO THE EXERCISE IN "code_refactored_exercise" FOLDER!!!!!!!!!!
+
 # clean_code_pracitce
 Deepens my skill to write clean code.
 
